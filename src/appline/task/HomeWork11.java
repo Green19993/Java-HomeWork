@@ -38,5 +38,6 @@ public class HomeWork11 {
         // Вывод результата:
         System.out.println("Большее значение = " + res1 + "\n" +
                 "Меньшее значение = " + res2);
+    scanner.close();
     }
 }

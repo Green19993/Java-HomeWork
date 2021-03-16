@@ -32,5 +32,6 @@ public class HomeWork13 {
         }
         // Счётчик слов:
         System.out.println("Количество слов: " + count);
+        scanner.close();
     }
 }

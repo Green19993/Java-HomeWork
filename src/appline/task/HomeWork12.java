@@ -45,5 +45,6 @@ public class HomeWork12 {
         // И после этого заменить 'a' на 'o':
         String str3 = str2.replace('a','o');
         System.out.println(str3);
+    scanner.close();
     }
 }
