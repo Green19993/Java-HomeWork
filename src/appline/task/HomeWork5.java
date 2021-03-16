@@ -29,6 +29,11 @@ public class HomeWork5 {
                 System.out.println("Разность x и y равна: " + (x-y));
                 break;
             case '/':
+                if (y == 0){
+                    System.out.println("Делить на ноль нельзя!");
+                    break;
+                }
+                else
                 System.out.println("Деление x на y равно: " + (x/y));
                 break;
             case '*':
