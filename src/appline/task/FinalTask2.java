@@ -17,23 +17,35 @@ public class FinalTask2 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите уравнение: ");
-        String str = scanner.nextLine();
-        scanner.close();
+        String str;
+
+        // Проверка на длину уравнения:
+        do {
+            System.out.println("Введите уравнение: ");
+            str = scanner.nextLine();
+            if (str.length() != 5){
+                System.out.println("Некорректный формат! " +
+                        "\nНеобходимо ввести уравнение длиной 5 символов. Пример: 'a+b=c'");
+            }
+        } while (str.length()!=5);
 
         // Вычисляем знак в уравнении:
         char znak = str.charAt(1);
 
-        // Нахождение позиции х:
+        // Нахождение позиции х(англ):
         int index = str.indexOf('x');
+        // Либо если х(рус):
+        if (index == -1) {
+            index = str.indexOf('х');
+        }
+            // Условие для вызова нужного метода:
+            if (znak == '+' && index != -1) {
+                plus(str, index);
+            } else if (znak == '-' && index != -1) {
+                minus(str, index);
+            } else System.out.println("Некорректный знак или уравнение!");
 
-        // Условие для вызова нужного метода:
-        if (znak == '+') {
-            plus(str, index);
-        } else
-            if (znak == '-') {
-            minus(str, index);
-        } else System.out.println("Некорректный знак!");
+        scanner.close();
     }
 
     // Класс для уравнения суммы:
