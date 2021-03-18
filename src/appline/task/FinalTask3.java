@@ -47,8 +47,8 @@ public class FinalTask3 {
             // Находим строку с наибольшим количеством различных символов:
             int stroka = 0;
             int index = 0;
-            for (int i = 0; i < (n-2); i++){
-                if (countList[i] >= countList[i+1]){
+            for (int i = 0; i < n; i++){
+                if (countList[index] < countList[i]){
                     index = i;
                 }
             }
