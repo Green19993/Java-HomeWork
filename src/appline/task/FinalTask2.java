@@ -82,7 +82,7 @@ public class FinalTask2 {
             case 2:
                 a = Character.getNumericValue(str.charAt(0));
                 c = Character.getNumericValue(str.charAt(4));
-                System.out.println(-(a - c));
+                System.out.println(a - c);
                 break;
             case 4:
                 a = Character.getNumericValue(str.charAt(0));
